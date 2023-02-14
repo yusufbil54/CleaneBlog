@@ -1,0 +1,34 @@
+<%- include('partials/_header') -%>
+
+<body>
+
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1><%= blog.title %></h1>
+            <h2 class="subheading"><%= blog.detail %></h2>
+            <span class="meta">Posted by
+              <a href="/">Start Bootstrap</a>
+              on August 24, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    <div class="form-inline">
+      <a href="/blog/edit/<%= blog._id %>" class="btn btn-outline-primary rounded-0 d-block ml-auto mr-1  tm-btn-animate tm-btn-submit tm-icon-submit"><span>Update</span></a>
+      <a href="/blog/edit/<%= blog._id %>?_method=DELETE" class="btn btn-outline-danger rounded-0 d-block ml-1 mr-auto tm-btn-animate tm-btn-submit tm-icon-submit"
+        onclick="confirm('Silmek İstediğinizden Emin misiniz?')"><span>Delete</span></a>
+    </div>
+  <hr>
+  <%- include('partials/_footer') -%>
+
+</body>
+
+</html>
